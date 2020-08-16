@@ -6,6 +6,14 @@
 
 Requires CUDA enviroment, _nvcc_ > 8.
 
+### Instalation:
+
+```sh
+$ pip install pycudacov
+```
+
+### Basic Usage
+
 ```python
 from sklearn.datasets import make_blobs
 from sklearn.preprocessing import StandardScaler
