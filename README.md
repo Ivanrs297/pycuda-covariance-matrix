@@ -4,7 +4,7 @@
 
 ## Usage and Installation
 
-Requires CUDA enviroment, _nvcc_ > 8.
+Requires CUDA enviroment.
 
 ### Instalation:
 
