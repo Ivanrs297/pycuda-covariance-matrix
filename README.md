@@ -32,3 +32,11 @@ df = df.astype(np.float32)
 covariance_matrix = get_cov(df.values)
 
 ```
+
+## Limitations
+
+-The maximum number of _features_ or columns of the data matrix is up to 1024
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
