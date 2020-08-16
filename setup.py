@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pycudacov",  # Replace with your own username
-    version="0.0.28",
+    version="0.0.30",
     author="Ivan Reyes",
     author_email="ivanrs297@gmail.com",
     description="A PyCuda Covariance Matrix Parallel Implementation",

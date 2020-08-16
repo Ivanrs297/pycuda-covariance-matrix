@@ -6,7 +6,7 @@
 
 Requires CUDA enviroment.
 
-### Instalation:
+### Installation:
 
 ```sh
 $ pip install pycudacov
