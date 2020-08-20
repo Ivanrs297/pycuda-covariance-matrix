@@ -22,20 +22,21 @@ import numpy as np
 from pycudacov import get_cov
 
 # Generate test dataset
-rows, cols = 16384, 1024 # samples, features
+rows, cols = 2048, 2048 # samples, features
 X, y = make_blobs(n_samples = rows, centers = 2, n_features = cols)
 X_std = StandardScaler().fit_transform(X) # Optional
 df = DataFrame(X_std)
 df = df.astype(np.float32)
 
-# Call to PyCUDA Kernel
-covariance_matrix = get_cov(df.values)
+
+blocks = 512	# Size of kernel blocks
+threads = 256	# Size of threads per block
+
+# Call to PyCUDA Kernel, return the cov. matrix and
+# GPU execution time in milliseconds
+covariance_matrix, gpu_exec_time = get_cov(df.values, blocks, threads)
 
 ```
-
-## Limitations
-
--The maximum number of _features_ or columns of the data matrix is up to 1024
 
 ## License
 
